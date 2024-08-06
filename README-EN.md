@@ -1,4 +1,7 @@
-![img1](.github/images/demo.png)
+
+▒█ ▒█ █▀▀█ █▀▄▀█ █▀▀ ▀▀█▀▀ █▀▀ █▀▀█ ▒█ ▄▀ █▀▀█ █▀▄▀█ █▀▀▄ █▀▀█ ▀▀█▀▀ ▒█▀▀█ █▀▀█ ▀▀█▀▀
+▒█▀▀█ █▄▄█ █ ▀ █ ▀▀█   █   █▀▀ █▄▄▀ ▒█▀▄  █  █ █ ▀ █ █▀▀▄ █▄▄█   █   ▒█▀▀▄ █  █   █
+▒█ ▒█ ▀  ▀ ▀   ▀ ▀▀▀   ▀   ▀▀▀ ▀ ▀▀ ▒█ ▒█ ▀▀▀▀ ▀   ▀ ▀▀▀  ▀  ▀   ▀   ▒█▄▄█ ▀▀▀▀   ▀
 
 > 🇷🇺 README на русском доступен [здесь](README.md)
 
@@ -6,11 +9,12 @@
 | Functional                                                     | Supported |
 |----------------------------------------------------------------|:---------:|
 | Multithreading                                                 |     ✅     |
-| Binding a proxy to a session                                   |     ✅     |
+| Binding a proxy to a profile                                   |     ✅     |
 | Auto-purchase of items if you have coins (tap, energy, charge) |     ✅     |
 | Support tdata / pyrogram .session / telethon .session          |     ✅     |
+| Automatic key collection                                       |     ✅     |
 
-## [Settings](https://github.com/shamhi/HamsterKombatBot/blob/main/.env-example)
+## [Settings](https://github.com/lolyinseo/HamsterKombatBot/blob/main/.env-example)
 | Setting name                          | Description                                                                                                   |
 |---------------------------------------|---------------------------------------------------------------------------------------------------------------|
 | **API_ID / API_HASH**                 | Platform data from which to launch a Telegram session _(stock - Android)_                                     |
@@ -29,7 +33,7 @@
 
 ## Prerequisites
 Before you begin, ensure you have the following installed:
-- [Python](https://www.python.org/downloads/) version 3.11
+- [Python](https://www.python.org/downloads/) version 3.12
 
 ## [Obtaining auth token on Android device](docs/android-auth-info-extraction-guide.md)
 
@@ -39,25 +43,23 @@ Before you begin, ensure you have the following installed:
 3. Note down the `API_ID` and `API_HASH` in `.env` file provided after registering your application.
 
 ## Installation
-You can download [**Repository**](https://github.com/shamhi/HamsterKombatBot) by cloning it to your system and installing the necessary dependencies:
+You can download [**Repository**](https://github.com/lolyinseo/HamsterKombatBot) by cloning it to your system and installing the necessary dependencies:
 ```shell
-~ >>> git clone https://github.com/shamhi/HamsterKombatBot.git
+~ >>> git clone https://github.com/lolyinseo/HamsterKombatBot.git
 ~ >>> cd HamsterKombatBot
 
 #Linux
-~/HamsterKombatBot >>> python3 -m venv venv
-~/HamsterKombatBot >>> source venv/bin/activate
+~/HamsterKombatBot >>> python3 -m venv hamsterbot
+~/HamsterKombatBot >>> source hamsterbot/bin/activate
 ~/HamsterKombatBot >>> pip3 install -r requirements.txt
-~/HamsterKombatBot >>> cp .env-example .env
-~/HamsterKombatBot >>> nano .env # Here you must specify your API_ID and API_HASH , the rest is taken by default
+~/HamsterKombatBot >>> nano .env # Here you must specify your API_ID and API_HASH (If you don't have authToken)
 ~/HamsterKombatBot >>> python3 main.py
 
 #Windows
-~/HamsterKombatBot >>> python -m venv venv
-~/HamsterKombatBot >>> venv\Scripts\activate
+~/HamsterKombatBot >>> python -m venv hamsterbot
+~/HamsterKombatBot >>> hamsterbot\Scripts\activate
 ~/HamsterKombatBot >>> pip install -r requirements.txt
-~/HamsterKombatBot >>> copy .env-example .env
-~/HamsterKombatBot >>> # Specify your API_ID and API_HASH, the rest is taken by default
+~/HamsterKombatBot >>> # Specify your API_ID and API_HASH in .env (If you don't have authToken)
 ~/HamsterKombatBot >>> python main.py
 ```
 
