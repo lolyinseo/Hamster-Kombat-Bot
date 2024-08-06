@@ -35,7 +35,7 @@
 Before you begin, ensure you have the following installed:
 - [Python](https://www.python.org/downloads/) version 3.12
 
-## [Obtaining auth token on Android device](docs/android-auth-info-extraction-guide.md)
+## [Obtaining auth token on Android device](docs/android-auth-info-extraction-guide_en.md)
 
 ## Obtaining API Keys(API_ID / API_HASH)
 1. Go to [my.telegram.org](https://my.telegram.org) and log in using your phone number.
