@@ -14,7 +14,7 @@
 | Support tdata / pyrogram .session / telethon .session          |     ✅     |
 | Automatic key collection                                       |     ✅     |
 
-## [Settings](https://github.com/lolyinseo/HamsterKombatBot/blob/main/.env-example)
+## [Settings](https://github.com/lolyinseo/HamsterKombatBot/blob/main/.env)
 | Setting name                          | Description                                                                                                   |
 |---------------------------------------|---------------------------------------------------------------------------------------------------------------|
 | **API_ID / API_HASH**                 | Platform data from which to launch a Telegram session _(stock - Android)_                                     |
@@ -37,7 +37,7 @@ Before you begin, ensure you have the following installed:
 
 ## [Obtaining auth token on Android device](docs/android-auth-info-extraction-guide.md)
 
-## Obtaining API Keys
+## Obtaining API Keys(API_ID / API_HASH)
 1. Go to [my.telegram.org](https://my.telegram.org) and log in using your phone number.
 2. Select **"API development tools"** and fill out the form to register a new application.
 3. Note down the `API_ID` and `API_HASH` in `.env` file provided after registering your application.
