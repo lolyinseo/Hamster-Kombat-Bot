@@ -108,19 +108,14 @@ class Tapper:
         logger.info(f"[{self.profile.name}] Start checking Playground games, it may take a while")
 
         if not plyaground and not (plyaground := Playground.load()):
-            print("no playground")
             return
         
         states = await self.web_client.get_promos()
-
-        print(states)
 
         #check alredy auth app
         for app in self.apps:
             
             available_promo = list(filter(lambda p: not p.blocked and next((s for s in states if s["promoId"] == p.promoId), {}).get('receiveKeysToday', 0) < p.keysPerDay, app.promos))
-            
-            #print(available_promo)
 
             if not available_promo or app.is_clientToken_expired(plyaground.loginSessionTimeoutSec):
                 self.apps.remove(app)
@@ -130,8 +125,6 @@ class Tapper:
             for promo in available_promo:
                 if promo.registerEvent:
                     promocode = await app.createCode(promo)
-
-                    print(promocode)
                     
                     if promocode:
                         await self.sleep(delay=5)
@@ -154,8 +147,6 @@ class Tapper:
         # register client for new app and add to self.apps 
         for app in apps:
             available_promo = list(filter(lambda p: not p.blocked and next((s for s in states if s["promoId"] == p.promoId), {}).get('receiveKeysToday', 0) < p.keysPerDay, app.promos))
-            
-            #print(available_promo)
 
             if not available_promo:
                 continue
@@ -166,7 +157,6 @@ class Tapper:
                 for promo in available_promo:
                     promo.registerEvent = await app.registerEvent(promo=promo) 
 
-                #print(app.promos)
                 self.apps.append(app)
 
 
