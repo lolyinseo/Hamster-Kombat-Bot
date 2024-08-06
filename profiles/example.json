@@ -1,0 +1,22 @@
+{
+    "name": "Session_Name(str)",
+    "id": Telegram_account_id(int),
+    "token": "Hamster_authToken(str)",
+    "session": "Pyrogram_Session(str)",
+    "wallet": "TON_wallet(str)",
+    "mnemonic": "mnemonic(str)",
+    "wait_for_most_profit_upgrades": true,
+    "auto_upgrade": true,
+    "auto_clicker": true,
+    "apply_daily_energy": true,
+    "min_balance": 1000000,
+    "min_taps_for_clicker_in_percent": 80,
+    "sleep_interval_before_upgrade": [
+        7,
+        30
+    ],
+    "balance_strategy": 10,
+    "user_agent": "Mozilla/5.0 (Linux; Android 12; 22101316C Build/PYDDEP1.755.942; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/126.0.6478.17 Mobile Safari/537.36",
+    "sec_ch_ua": "\"Android WebView\";v=\"125\", \"Chromium\";v=\"125\", \"Not?A_Brand\";v=\"33\"",
+    "proxy": null
+}
