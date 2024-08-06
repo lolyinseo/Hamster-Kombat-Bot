@@ -7,8 +7,8 @@ from bot.utils import logger
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=".env", env_ignore_empty=True)
     
-    API_ID: int
-    API_HASH: str
+    API_ID: int | None = None
+    API_HASH: str | None = None
 
     ROOT_PATH: Path = Path(__file__).parents[2]
     PROFILE_DIR: Path = ROOT_PATH.joinpath('profiles')
