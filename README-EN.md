@@ -17,7 +17,7 @@
 ## [Settings file (.env)](https://github.com/lolyinseo/HamsterKombatBot/blob/main/.env)
 | Setting name                          | Description                                                                                                   |
 |---------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| **API_ID / API_HASH**                 | Data for working with session _(more details below)_                                     |
+| **API_ID / API_HASH**                 | Data for working with Telegram session _(more details below)_                                     |
 | **AUTO_UPGRADE**                      | Whether to upgrade the passive earn _(True / False)_                                                          |
 | **AUTO_CLICKER**                      | Enable automatic clicker _(True / False)_                                                                     |
 | **WAIT_FOR_MOST_PROFIT_UPGRADES**     | Save money for the most profitable upgrade                                                                    |
