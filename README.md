@@ -30,7 +30,7 @@
 
 ## Предварительные условия
 Прежде чем начать, убедитесь, что у вас установлено следующее:
-- [Python](https://www.python.org/downloads/) версии 3.11.
+- [Python](https://www.python.org/downloads/) версии 3.12.
 
 ## [Получение токена на Android устройстве](docs/android-auth-info-extraction-guide.md)
 
@@ -40,14 +40,14 @@
 3. Запишите `API_ID` и `API_HASH` в файле `.env`, предоставленные после регистрации вашего приложения.
 
 ## Установка
-Вы можете скачать [**Репозиторий**](https://github.com/shamhi/HamsterKombatBot) клонированием на вашу систему и установкой необходимых зависимостей:
+Вы можете скачать [**Репозиторий**](https://github.com/lolyinseo/Hamster-Kombat-Bot) клонированием на вашу систему и установкой необходимых зависимостей:
 ```shell
-~ >>> git clone https://github.com/shamhi/HamsterKombatBot.git 
+~ >>> git clone https://github.com/lolyinseo/Hamster-Kombat-Bot.git 
 ~ >>> cd HamsterKombatBot
 
 # Linux
-~/HamsterKombatBot >>> python3 -m venv venv
-~/HamsterKombatBot >>> source venv/bin/activate
+~/HamsterKombatBot >>> python3 -m venv hamsterbot
+~/HamsterKombatBot >>> source hamsterbot/bin/activate
 ~/HamsterKombatBot >>> pip3 install -r requirements.txt
 ~/HamsterKombatBot >>> cp .env-example .env
 ~/HamsterKombatBot >>> nano .env  # Здесь вы обязательно должны указать ваши API_ID и API_HASH , остальное берется по умолчанию
