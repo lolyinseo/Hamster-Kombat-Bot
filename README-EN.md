@@ -17,18 +17,21 @@
 ## [Settings file (.env)](https://github.com/lolyinseo/HamsterKombatBot/blob/main/.env)
 | Setting name                          | Description                                                                                                   |
 |---------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| **API_ID / API_HASH**                 | Platform data from which to launch a Telegram session _(stock - Android)_                                     |
+| **API_ID / API_HASH**                 | Data for working with session _(more details below)_                                     |
 | **AUTO_UPGRADE**                      | Whether to upgrade the passive earn _(True / False)_                                                          |
 | **AUTO_CLICKER**                      | Enable automatic clicker _(True / False)_                                                                     |
 | **WAIT_FOR_MOST_PROFIT_UPGRADES**     | Save money for the most profitable upgrade                                                                    |
 | **APPLY_DAILY_ENERGY**                | Whether to use the daily free energy boost _(True / False)_                                                   |
 | **MIN_BALANCE**                       | Minimal balance that always will be availble                                                                  |
-| **MIN_TAPS_FOR_CLICKER_IN_PERCENT**   | Minimum percentage of taps (of the available number) at which the clicker will be launched. _Default 60%_     |
+| **MIN_TAPS_FOR_CLICKER_IN_PERCENT**   | Minimum percentage of taps (of the available number) at which the clicker will be launched. _Default 80%_     |
 | **SLEEP_INTERVAL_BEFORE_UPGRADE**     | Sleep before every upgrade. _default: [10, 40]_                                                               |
-| **USE_PROXY_FROM_FILE**               | Whether to use proxy from the `bot/config/proxies.txt` file (True / False)                                    |
-## [Profile files](https://github.com/lolyinseo/HamsterKombatBot/blob/main/profiles/example.json)
-Profiles are generated automatically if you use authorization through this bot. You can create a profile manually if you already have an authToken [read more](docs/android-auth-info-extraction-guide_en.md).
+| **USE_PROXY_FROM_FILE**               | Path to file with proxy                                 |
 
+
+
+## [Profile files](https://github.com/lolyinseo/HamsterKombatBot/blob/main/profiles/example.json)
+Profiles are generated automatically if you use authorization through this bot. You can create a profile manually if you already have an authToken [read more](docs/android-auth-info-extraction-guide_en.md). In this case, rename ./profiles/example.json. Fill in name, id and token.
+ 
 ## Quick Start 📚
 1. To install libraries on Windows click on `INSTALL.bat`.
 2. To start the bot use `START.bat` (or in console: `python main.py`).
