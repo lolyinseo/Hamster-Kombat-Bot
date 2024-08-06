@@ -26,6 +26,8 @@
 | **MIN_TAPS_FOR_CLICKER_IN_PERCENT**   | Minimum percentage of taps (of the available number) at which the clicker will be launched. _Default 60%_     |
 | **SLEEP_INTERVAL_BEFORE_UPGRADE**     | Sleep before every upgrade. _default: [10, 40]_                                                               |
 | **USE_PROXY_FROM_FILE**               | Whether to use proxy from the `bot/config/proxies.txt` file (True / False)                                    |
+## [Profile files](https://github.com/lolyinseo/HamsterKombatBot/blob/main/profiles/example.json)
+Profiles are generated automatically if you use authorization through this bot. You can create a profile manually if you already have an authToken [read more](docs/android-auth-info-extraction-guide_en.md).
 
 ## Quick Start 📚
 1. To install libraries on Windows click on `INSTALL.bat`.
