@@ -62,7 +62,7 @@ class App():
             'Connection': 'keep-alive',
             'Accept': 'application/json',
             'Content-Type': 'application/json; charset=utf-8',
-            'User-Agent': 'Dalvik/2.1.0 (Linux; U; Android 12.0; ZUK Z2121 Build/NRD90M)',
+            'User-Agent': 'Dalvik/2.1.0 (Linux; U; Android 12.0; Lenovo Z2122 Build/NRD91M)',
         }  
         
         session = requests.Session()
@@ -93,23 +93,18 @@ class App():
         return False
 
     async def registerClient(self, proxy: str = None):
-        print('registerClient')
 
         self.http_client = self.initSession(proxy)
 
         try:
             response = self.http_client.post(url=Api.LOGIN_CLIENT,
                                     json ={"appToken":self.token,"clientId":self.random_deviceid(),"clientOrigin":"deviceid"})
-            #print(response.text)
             response.raise_for_status()
             authtoken = response.json().get('clientToken', None)
-            #print('registerClient authtoken:', authtoken)
             
             self.http_client.headers.update({'Authorization':f'Bearer {authtoken}'})
 
         except Exception as error:
-            print('registerClient_error')
-            print(error)
             authtoken = None
 
         self.clientToken = authtoken
@@ -128,23 +123,15 @@ class App():
         return code if code else None
 
     async def registerEvent(self, promo: Promo, timeout=20, retries = 10):
-        #print('registerEvent')
-        #print('promo.promoId:', promo.promoId)
-        #print('self.clientToken:', self.clientToken)
-        #print('headers:', self.http_client.headers)
-        #print('proxy:', self.http_client.proxies)
-
         await asyncio.sleep(self.registerEventTimeoutSec)
+
         try:
             response = self.http_client.post(url=Api.REGISTER_EVENT,
                                     json ={"promoId":promo.promoId,"eventId":str(uuid.uuid4()),"eventOrigin": "undefined"})
             
-            #print(response.text)
             response.raise_for_status()            
             hashCode = response.json().get('hasCode', None)
         except Exception as error:
-            print('registerEvent_error')
-            print(error)
             hashCode = None
 
         return hashCode if hashCode or retries == 0  else await self.registerEvent(promo, timeout, retries-1)
@@ -177,7 +164,7 @@ class Playground():
             'Connection': 'keep-alive',
             'Accept': 'application/json',
             'Content-Type': 'application/json; charset=utf-8',
-            'User-Agent': 'Dalvik/2.1.0 (Linux; U; Android 12.0; ZUK Z2121 Build/NRD90M)',
+            'User-Agent': 'Dalvik/2.1.0 (Linux; U; Android 12.0; Lenovo Z2122 Build/NRD91M)',
         }  
         response = requests.get(url=settings.GAMES_JSON_URL, headers=headers)
 
