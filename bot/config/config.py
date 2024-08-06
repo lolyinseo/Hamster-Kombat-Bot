@@ -14,7 +14,7 @@ class Settings(BaseSettings):
     PROFILE_DIR: Path = ROOT_PATH.joinpath('profiles')
     USE_PROXY_FROM_FILE: Path | None = None
     
-    ENCRYPT_KEY: str
+    ENCRYPT_KEY: str | None = None
 
     WAIT_FOR_MOST_PROFIT_UPGRADES: bool = True
 
