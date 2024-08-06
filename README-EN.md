@@ -14,7 +14,7 @@
 | Support tdata / pyrogram .session / telethon .session          |     ✅     |
 | Automatic key collection                                       |     ✅     |
 
-## [Settings](https://github.com/lolyinseo/HamsterKombatBot/blob/main/.env)
+## [Settings file (.env)](https://github.com/lolyinseo/HamsterKombatBot/blob/main/.env)
 | Setting name                          | Description                                                                                                   |
 |---------------------------------------|---------------------------------------------------------------------------------------------------------------|
 | **API_ID / API_HASH**                 | Platform data from which to launch a Telegram session _(stock - Android)_                                     |
