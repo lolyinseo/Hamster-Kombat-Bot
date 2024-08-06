@@ -1,4 +1,4 @@
-# Guide on extracting authorization information on Android
+# Guide on extracting authToken on Android
 
 ## Steps
 
