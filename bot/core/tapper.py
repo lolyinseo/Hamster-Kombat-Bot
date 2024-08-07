@@ -107,7 +107,7 @@ class Tapper:
 
         logger.info(f"[{self.profile.name}] Start checking Playground games, it may take a while")
 
-        if not plyaground and not (plyaground := Playground.load()):
+        if not plyaground:
             return
         
         states = await self.web_client.get_promos()
@@ -235,9 +235,9 @@ class Tapper:
         return True
     
     async def parse_config(self) -> tuple:
-        daily_cipher, minigame, playground = await self.web_client.get_config() 
+        daily_cipher, minigame = await self.web_client.get_config() 
         await self.sleep(delay=5)
-        return daily_cipher, minigame, playground
+        return daily_cipher, minigame
 
     async def make_upgrades(self):
         if settings.UPGRADE_DAILY_COMBO:
@@ -354,9 +354,9 @@ class Tapper:
                 #     - boosts-for-buy
                 #     - list-tasks
                 await self.web_client.get_me_telegram()
-                self.daily_cipher, self.minigame, playground  = await self.parse_config()
+                self.daily_cipher, self.minigame  = await self.parse_config()
 
-                await self.check_playground(playground)
+                await self.check_playground(Playground.load())
 
                 self.user = await self.earn_money()
 
