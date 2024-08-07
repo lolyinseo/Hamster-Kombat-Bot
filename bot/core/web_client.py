@@ -4,7 +4,6 @@ from time import time
 import aiohttp
 
 from bot.core.entities import AirDropTask, Boost, Upgrade, User, Task, DailyCombo, AirDropTaskId, DailyCipher, MiniGame
-from bot.core.playground import Playground
 from bot.core.api import Requests
 from bot.utils.profile import Profile
 
@@ -89,12 +88,11 @@ class WebClient:
     async def get_me_telegram(self) -> None:
         await self.make_request(Requests.ME_TELEGRAM)
 
-    async def get_config(self) -> tuple[DailyCipher, MiniGame, ]:
+    async def get_config(self) -> tuple[DailyCipher, MiniGame]:
         response = await self.make_request(Requests.CONFIG)
 
         return DailyCipher(data=response.get('dailyCipher')) if "dailyCipher" in response else None, \
-            MiniGame(data=response.get('dailyKeysMiniGame')) if "dailyKeysMiniGame" in response else None, \
-            Playground(data=response['clickerConfig']['promos']) if response.get("clickerConfig", None).get("promos", None) else None,
+            MiniGame(data=response.get('dailyKeysMiniGame')) if "dailyKeysMiniGame" in response else None
 
     async def claim_daily_cipher(self, cipher: str) -> User:
         response = await self.make_request(Requests.CLAIM_DAILY_CIPHER, json={'cipher': cipher})
