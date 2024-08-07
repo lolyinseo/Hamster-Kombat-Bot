@@ -30,7 +30,7 @@
 ### 5. Debug Web View
 
 1. On your device, open Telegram and navigate to the HamsterKombat bot.
-2. In Chrome, find your device in the list and choose any of the available Hamster Kombat processes. ![alt text](image.png)
+2. In Chrome, find your device in the list and choose any of the available Hamster Kombat processes. ![alt text](1111.png)
 3. Click on **inspect**.
 
 ### 6. Using DevTools
