@@ -49,4 +49,4 @@
    For example: `Bearer 9aFJ6C29b81cLmR04DKq7fXzQi52tHOG8e7R9vUj6iPcYwTxN0uMbA3SdV5Ks2WjMnLv8qZoJ3F1rY46tQm9` should become `9aFJ6C29b81cLmR04DKq7fXzQi52tHOG8e7R9vUj6iPcYwTxN0uMbA3SdV5Ks2WjMnLv8qZoJ3F1rY46tQm9`.
    This is your token. ![fields](https://github.com/Sanlovty/HamsterKombatBot_prs/assets/68380831/410a4a77-bfcd-46fb-8151-6dcb74965e41)
 
-7. All the other fields, highlighted in yellow [`Accept-Encoding`,`Accept-Language`,`Sec-Ch-Ua`,`Sec-Ch-Ua-Mobile`,`Sec-Ch-Ua-Platform`] can be used to generate a custom **headers** in [headers.py](https://github.com/AnisovAleksey/HamsterKombatBot/blob/b66014360c5664c27936378c7b611feb5b6c46dd/bot/core/headers.py).
+7. All the other fields, highlighted in yellow [`User-Agent`,`Sec-Ch-Ua`] can be used to generate a custom **headers** in [headers.py]
