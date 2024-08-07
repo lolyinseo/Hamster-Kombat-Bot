@@ -157,7 +157,7 @@ class Playground():
         self.apps = list(map(lambda d: App(data=d), data["apps"])) if data["apps"] else None
     
     @staticmethod
-    def load():
+    def getConfigJson():
         headers =  {
             'Accept-Language': 'ru,ru-RU;q=0.9,en-US;q=0.8,en;q=0.7',
             'Accept-Encoding': 'gzip, deflate, br',
