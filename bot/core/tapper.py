@@ -356,7 +356,7 @@ class Tapper:
                 await self.web_client.get_me_telegram()
                 self.daily_cipher, self.minigame  = await self.parse_config()
 
-                await self.check_playground(Playground.load())
+                await self.check_playground(Playground.getConfigJson())
 
                 self.user = await self.earn_money()
 
