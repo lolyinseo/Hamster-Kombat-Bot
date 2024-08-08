@@ -47,7 +47,7 @@
 Прежде чем начать, убедитесь, что у вас установлено следующее:
 - [Python](https://www.python.org/downloads/) версии 3.12.
 
-## [Получение токена на Android устройстве](docs/android-auth-info-extraction-guide.md)
+## [Получение токена authToken на Android](docs/android-auth-info-extraction-guide.md)
 
 ## Получение API ключей (не обязательно, если у вас уже есть authToken)
 1. Перейдите на сайт [my.telegram.org](https://my.telegram.org) и войдите в систему, используя свой номер телефона.
