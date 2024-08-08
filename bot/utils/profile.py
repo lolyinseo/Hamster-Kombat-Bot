@@ -17,6 +17,7 @@ class Profile(BaseModel, validate_assignment=True):
 
     wait_for_most_profit_upgrades : bool = settings.WAIT_FOR_MOST_PROFIT_UPGRADES 
     auto_upgrade: bool = settings.AUTO_UPGRADE 
+    upgrade_daily_combo: bool = settings.UPGRADE_DAILY_COMBO
     auto_clicker: bool = settings.AUTO_CLICKER 
     apply_daily_energy: bool = settings.APPLY_DAILY_ENERGY 
 
