@@ -240,7 +240,7 @@ class Tapper:
         return daily_cipher, minigame
 
     async def make_upgrades(self):
-        if settings.UPGRADE_DAILY_COMBO:
+        if self.profile.upgrade_daily_combo:
             wait_for_combo_upgrades = await self.check_daily_combo()
             if wait_for_combo_upgrades:
                 return
